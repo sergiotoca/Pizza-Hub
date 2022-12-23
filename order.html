@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Pizza hub | Pizza Delivery</title>
+		<meta name="author" content="Sergio Toledo" />
+		<meta name="description" content="A HTML web page with a form for ordering pizza. The prototype pizza company named Pizza hub">
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="css/styles.css" />
+        <script src="js/cart.js" ></script>
+    </head>
+    <body>
+        <header>
+            <!--Fixed navigation bar with all the main links from the website-->
+            <div class="navigation-container">
+            <div class="navigation-content">
+                <div class="logo"><img src="images/pizza-hub-logo.png" alt="Pizza Hub Logo" /></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" title="Go to the Home page">Home</a></li>
+                        <li><a href="order.html" title="Start your order">Build your Own Pizza</a></li>
+                        <li><a href="drinks.html" title="Choose your favorite beverage">Drinks</a></li>
+                        <li><a href="desserts.html" title="Choose your favorite dessert">Desserts</a></li>
+                    </ul>
+                </nav>
+                <div class="cart">
+                    <ul>
+                        <li><a href="cart.html" title="See your order">Cart</a></li>
+                        <li><a href="signin.html" title="Sign In">Sign In</a></li>
+                    </ul>
+                </div>    
+                
+            <!--End Navigation menu-->
+            </div>
+            </div>
+        </header>
+        <main>
+            <h2>Make it your own way!</h2>
+            
+         <form action="checkout.html" method="post">
+            <!--Receiving the pizza order from the client-->
+            <!--Radio Button to display the pizza flavors with it's own image-->
+            <fieldset class="image-radiobtn">
+                <legend> Main flavor:</legend>
+                
+                <label class="labelexpanded">
+                    <input type="radio" name="mainflavor" id="flavor_1" value="Bacon">
+                    <div class="radio-btns">
+                        <img src="images/Bacon.png" alt="Bacon Pizza" />
+                        <label for="flavor_1">Bacon</label>
+                    </div>
+                    </input>
+                </label>
+                <label class="labelexpanded">
+                    <input type="radio" name="mainflavor" id="flavor_2" value="Pepperoni">
+                    <div class="radio-btns">
+                        <img src="images/Pepperoni.png" alt="Pepperoni Pizza"/>
+                        <label for="flavor_2">Pepperoni</label>
+                    </div>
+                    </input>
+                </label>
+                <label class="labelexpanded">
+                    <input type="radio" name="mainflavor" id="flavor_3" value="Veggie">
+                    <div class="radio-btns">
+                        <img src="images/Veggie.png" alt="Veggie Pizza"/>
+                        <label for="flavor_3">Veggie</label>
+                    </div>
+                    </input>
+                </label>
+            </fieldset>
+            <fieldset>
+                <!-- Pizza size-->
+                <legend>Pizza Size:</legend>
+                <p>
+                  <input type="radio" name="size" id="size_1" value="small" />
+                  <label for="size_1">9&quot;</label>
+                </p>
+                <p>
+                  <input type="radio" name="size" id="size_2" value="medium" />
+                  <label for="size_2">12&quot;</label>
+                </p>
+                <p>
+                  <input type="radio" name="size" id="size_3" value="large" />
+                  <label for="size_3">14&quot;</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <!--Crust tipe-->
+                <legend>Crust type:</legend>
+                <p>
+                    <input type="radio" name="crust" id="crust_1" value="deep_dish" />
+                    <label for="crust_1">Deep Dish</label>
+                </p>
+                <p>
+                    <input type="radio" name="crust" id="crust_2" value="thin_crust" />
+                    <label for="crust_2">Thin Crust</label>
+                </p>
+                <p>
+                    <input type="radio" name="crust" id="crust_3" value="pan" />
+                    <label for="crust_3">Pan</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <!--Add extra toppings-->
+                <legend>Extra Toppings:</legend>
+                
+                <p>
+                     <label for="top_1">Cheese</label>
+                    <input type="checkbox" id="top_1" name="top_cheese" value="cheese">
+                </p>
+                 <p>
+                    <label for="top_2">Pepperoni</label>
+                    <input type="checkbox" id="top_2" name="top_pepperoni" value="pepperoni">
+                </p>
+                <p>
+                    <label for="top_3">Beef</label>
+                    <input type="checkbox" id="top_3" name="top_beef" value="beef">
+                </p>
+                <p>
+                    <label for="top_4">Bacon</label>
+                    <input type="checkbox" id="top_4" name="top_bacon" value="bacon">
+                </p>
+                <p>
+                    <label for="top_5">Tomato</label>
+                    <input type="checkbox" id="top_5" name="top_tomato" value="tomato">
+                </p>
+                <p>
+                    <label for="top_6">Red Hot Chilly Peppers</label>
+                    <input type="checkbox" id="top_6" name="top_spicy" value="spicy">
+                </p>
+                <p>
+                    <label for="top_7">Green Olives</label>
+                    <input type="checkbox" id="top_7" name="top_olive" value="olive">
+                </p>
+            </fieldset>
+            <div class="submit-btn">
+                <p>
+                    <input type="submit" value="That's it!">
+                    <input type="reset" value="Reset order">
+                </p>
+            </div>
+            
+         </form>   
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

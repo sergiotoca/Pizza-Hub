@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Pizza hub | Pizza Delivery</title>
+		<meta name="author" content="Sergio Toledo" />
+		<meta name="description" content="A HTML web page with a form for ordering pizza. The prototype pizza company named Pizza hub">
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="css/styles.css" />
+        <script src="js/cart.js" ></script>
+    </head>
+    <body>
+        <header>
+            <!--Fixed navigation bar with all the main links from the website-->
+            <div class="navigation-container">
+            <div class="navigation-content">
+                <div class="logo"><img src="images/pizza-hub-logo.png" alt="Pizza Hub Logo" /></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" title="Go to the Home page">Home</a></li>
+                        <li><a href="order.html" title="Start your order">Build your Own Pizza</a></li>
+                        <li><a href="drinks.html" title="Choose your favorite beverage">Drinks</a></li>
+                        <li><a href="desserts.html" title="Choose your favorite dessert">Desserts</a></li>
+                    </ul>
+                </nav>
+                <div class="cart">
+                    <ul>
+                        <li><a href="cart.html" title="See your order">Cart</a></li>
+                        <li><a href="signin.html" title="Sign In">Sign In</a></li>
+                    </ul>
+                </div>    
+                
+            <!--End Navigation menu-->
+            </div>
+            </div>
+        </header>
+        <main>
+            <h2>Your pizza will be delivered shortly!</h2>
+            <h2>Fill out the delivery information first!!</h2>
+         <form action="index.html" method="post">
+            <!--Receiving the order information from the client-->
+           <fieldset>
+            <legend>Personal Information</legend>
+            <div>
+                <input type="text" name="fName" id="fName" size="25" placeholder="Type your first name here!"/>
+                <label for="fName">First Name</label>
+            </div>
+            <div>
+                <input type="text" name="lName" id="lName" size="25" placeholder="Type your last name here!"/>
+                <label for="lName">Last Name</label>
+            </div>
+            <div>
+                <input type="email" name="email" id="email"/>
+                <label for="email">Email</label>
+            </div>
+            <div>
+                <input type="tel" name="phone" id="phone"/>
+                <label for="phone">Phone</label>
+            </div>
+           </fieldset>
+           <fieldset>
+            <legend>Delivery Address</legend>
+            <div>
+                <input type="text" name="street" id="street" placeholder="Include your unit number!"/>
+                <label for="street">Street Address</label>
+            </div>
+            <div>
+                <input type="text" name="city" id="city"/>
+                <label for="city">City</label>
+            </div>
+            <div>
+                <select id="province" name="province">
+                    <option value="ON">Ontario</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="AB">Alberta</opition>
+                    <option value="MB">Manitoba</option>
+                    <option value="QC">Quebec</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                    <option value="SK">Saskatchewan</option>
+                </select>
+                <label for="province">Province</label>
+            </div>
+            <div>
+                <input type="text" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" name="postal" id="postal"/>
+                <label for="postal">Postal Code</label>
+            </div>
+           </fieldset>
+            <fieldset>
+                <legend>Credit Card Details</legend>
+                <div>
+                    <input type="radio" name="ccType" id="amex" value="American Express"/>
+                    <label for="amex">American Express</label>
+                    <input type="radio" name="ccType" id="mc" value="MasterCard"/>
+                    <label for="mc">MasterCard</label>
+                    <input type="radio" name="ccType" id="visa" value="Visa"/>
+                    <label for="visa">Visa</label>
+                </div>
+                <div>
+                    <input type="text" name="ccNumber" pattern="[0-9]{16}" id="ccNumber" placeholder="xxxx xxxx xxxx xxxx"/>
+                    <label for="ccNumber">Credit Card Number</label>
+                </div>
+                <select id="ccYear" name="ccYear">
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                </select>
+                <label for="ccYear">Expiration Year</label>
+                <div>
+                    <select id="ccMonth" name="ccMonth">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <label for="ccMonth">Expiration Month</label>
+                </div>
+                <div>
+                    <input type="text" name="CVV" pattern="[0-9]{3}" id="CVV" placeholder="CVV" size="3"/>
+                    <label for="CVV">Security Number</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information</legend>
+                <textarea id="story" name="story" rows="5" cols="33" placeholder="Place here any important information regarding the delivery address or the pizza itself..."></textarea>
+            </fieldset>
+            <div class="submit-btn">
+                <p>
+                    <input type="submit" value="That's it!">
+                    <input type="reset" value="Reset order">
+                </p>
+            </div>
+         </form>   
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
